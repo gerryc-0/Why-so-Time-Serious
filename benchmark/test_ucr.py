@@ -24,7 +24,7 @@ from weasel.classification.dictionary_based import WEASEL_V2, WEASEL, BOSSEnsemb
 sys.path.append("../../..")
 
 
-def load_from_ucr_tsv_to_dataframe_plain(full_file_path_and_name):
+def load_from_ucr_txt_to_dataframe_plain(full_file_path_and_name):
     """Load UCR datasets."""
     df = pd.read_csv(
         full_file_path_and_name,
@@ -143,7 +143,7 @@ dataset_names_full = [
     "OSULeaf",
     "PhalangesOutlinesCorrect",
     "Phoneme",
-    "PickupGestureWiimoteZ",
+    # "PickupGestureWiimoteZ",
     "PigAirwayPressure",
     "PigArtPressure",
     "PigCVP",
@@ -158,7 +158,7 @@ dataset_names_full = [
     "SemgHandGenderCh2",
     "SemgHandMovementCh2",
     "SemgHandSubjectCh2",
-    "ShakeGestureWiimoteZ",
+    # "ShakeGestureWiimoteZ",
     "ShapeletSim",
     "ShapesAll",
     "SmallKitchenAppliances",
@@ -187,8 +187,19 @@ dataset_names_full = [
     "WormsTwoClass",
     "Yoga",
 ]
+print("Total datasets:", len(dataset_names_full))
+used_dataset = dataset_names_full
+
+# used_dataset = [
+#     "ECG200",
+#     "GunPoint",
+#     "Coffee",
+#     "Beef",
+#     "ItalyPowerDemand",
+# ]
 
 
+# only picking WEASEL 2.0 as classifier
 def get_classifiers(threads_to_use):
     """Obtain the benchmark classifiers."""
     clfs = {
@@ -196,43 +207,32 @@ def get_classifiers(threads_to_use):
            random_state=1379,
            n_jobs=threads_to_use
         ),
-        "WEASEL": WEASEL(
-           random_state=1379,
-           n_jobs=threads_to_use,
-        ),
-        "BOSS": BOSSEnsemble(
-            random_state=1379,
-            n_jobs=threads_to_use,
-        ),
-        "MUSE": MUSE(
-           random_state=1379,
-           n_jobs=threads_to_use,
-        ),
-        "MUSE 2.0": MUSE_V2(
-           random_state=1379,
-           n_jobs=threads_to_use,
-        ),
+        # "WEASEL": WEASEL(
+        #    random_state=1379,
+        #    n_jobs=threads_to_use,
+        # ),
+        # "BOSS": BOSSEnsemble(
+        #     random_state=1379,
+        #     n_jobs=threads_to_use,
+        # ),
+        # "MUSE": MUSE(
+        #    random_state=1379,
+        #    n_jobs=threads_to_use,
+        # ),
+        # "MUSE 2.0": MUSE_V2(
+        #    random_state=1379,
+        #    n_jobs=threads_to_use,
+        # ),
     }
     return clfs
 
 
 # Configuration, adapt to your needs
-DATA_PATH = "/Users/bzcschae/workspace/UCRArchive_2018/"
+DATA_PATH = "C:\\Users\\gerar\\Documents\\AAI\\AI_for_Time_Series\\project\\weasel\\UCRArchive_2018"
 parallel_jobs = 1
 threads_to_use = 4
-used_dataset = dataset_names_excerpt  # dataset_names_full
 server = False
 
-if os.path.exists(DATA_PATH):
-    DATA_PATH = "/Users/bzcschae/workspace/UCRArchive_2018/"
-    used_dataset = dataset_names_excerpt
-    server = False
-else:
-    DATA_PATH = "/vol/fob-wbib-vol2/wbi/schaefpa/sktime/datasets/UCRArchive_2018"
-    parallel_jobs = 40  # 20
-    threads_to_use = 1  # 1
-    used_dataset = dataset_names_full
-    server = True
 
 if __name__ == "__main__":
 
@@ -241,27 +241,20 @@ if __name__ == "__main__":
         simplefilter(action="ignore", category=FutureWarning)
         simplefilter(action="ignore", category=UserWarning)
 
-        X_train, y_train = load_from_ucr_tsv_to_dataframe_plain(
-            os.path.join(DATA_PATH, dataset_name, dataset_name + "_TRAIN.tsv")
+        X_train, y_train = load_from_ucr_txt_to_dataframe_plain(
+            os.path.join(DATA_PATH, dataset_name, dataset_name + "_TRAIN.txt")
         )
-        X_test, y_test = load_from_ucr_tsv_to_dataframe_plain(
-            os.path.join(DATA_PATH, dataset_name, dataset_name + "_TEST.tsv")
+        X_test, y_test = load_from_ucr_txt_to_dataframe_plain(
+            os.path.join(DATA_PATH, dataset_name, dataset_name + "_TEST.txt")
         )
 
         X_train = np.reshape(np.array(X_train), (len(X_train), 1, -1))
         X_test = np.reshape(np.array(X_test), (len(X_test), 1, -1))
-
-        if server:
-            try:  # catch exceptions
-                return make_run(
-                    X_test, X_train, clf_name, dataset_name, y_test, y_train
-                )
-            except Exception as e:
-                print("An exception occurred: {}".format(e))
-                print("\tFailed: ", dataset_name, clf_name)
-                print(e)
-        else:
+        try:
             return make_run(X_test, X_train, clf_name, dataset_name, y_test, y_train)
+        except ValueError as e:
+            print(f"Skipping {dataset_name} due to error: {e}")
+            return {}
 
 
     def make_run(X_test, X_train, clf_name, dataset_name, y_test, y_train):
@@ -375,23 +368,22 @@ if __name__ == "__main__":
         for fit, pred, dataset_name in zip(all_fit, all_pred, all_datasets):
             csv_timings.append((name, dataset_name, fit, pred))
 
-    if server:
-        pd.DataFrame.from_records(
-            csv_scores,
-            columns=[
-                "Classifier",
-                "Dataset",
-                "Accuracy",
-                "Train-Acc",
-            ],
-        ).to_csv("ucr-112-accuracy-sone.csv", index=None)
+    pd.DataFrame.from_records(
+        csv_scores,
+        columns=[
+            "Classifier",
+            "Dataset",
+            "Accuracy",
+            "Train-Acc",
+        ],
+    ).to_csv("ucr-113-accuracy-sone.csv", index=False)
 
-        pd.DataFrame.from_records(
-            csv_timings,
-            columns=[
-                "Classifier",
-                "Dataset",
-                "Fit-Time",
-                "Predict-Time",
-            ],
-        ).to_csv("ucr-112-runtime-sone.csv", index=None)
+    pd.DataFrame.from_records(
+        csv_timings,
+        columns=[
+            "Classifier",
+            "Dataset",
+            "Fit-Time",
+            "Predict-Time",
+        ],
+    ).to_csv("ucr-113-runtime-sone.csv", index=False)
