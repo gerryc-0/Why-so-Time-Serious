@@ -38,37 +38,39 @@ def load_from_ucr_txt_to_dataframe_plain(full_file_path_and_name):
 
 
 dataset_names_excerpt = [
-    "ArrowHead",
-    "Beef",
-    "BeetleFly",
-    "BirdChicken",
-    "Car",
-    "CBF",
-    "Coffee",
-    "DiatomSizeReduction",
-    "DistalPhalanxOutlineAgeGroup",
-    "DistalPhalanxOutlineCorrect",
-    "DistalPhalanxTW",
-    "ECG200",
-    "ECGFiveDays",
-    "FaceAll",
-    "FaceFour",
-    "FacesUCR",
-    "GunPoint",
-    "ItalyPowerDemand",
-    "MiddlePhalanxOutlineAgeGroup",
-    "MiddlePhalanxOutlineCorrect",
-    "MiddlePhalanxTW",
-    "OliveOil",
-    "Plane",
-    "ProximalPhalanxOutlineAgeGroup",
-    "ProximalPhalanxOutlineCorrect",
-    "ProximalPhalanxTW",
-    "SonyAIBORobotSurface1",
-    "SonyAIBORobotSurface2",
-    "SyntheticControl",
-    "TwoLeadECG",
-    "Wine",
+    "PickupGestureWiimoteZ",
+    "ShakeGestureWiimoteZ",
+    # "ArrowHead",
+    # "Beef",
+    # "BeetleFly",
+    # "BirdChicken",
+    # "Car",
+    # "CBF",
+    # "Coffee",
+    # "DiatomSizeReduction",
+    # "DistalPhalanxOutlineAgeGroup",
+    # "DistalPhalanxOutlineCorrect",
+    # "DistalPhalanxTW",
+    # "ECG200",
+    # "ECGFiveDays",
+    # "FaceAll",
+    # "FaceFour",
+    # "FacesUCR",
+    # "GunPoint",
+    # "ItalyPowerDemand",
+    # "MiddlePhalanxOutlineAgeGroup",
+    # "MiddlePhalanxOutlineCorrect",
+    # "MiddlePhalanxTW",
+    # "OliveOil",
+    # "Plane",
+    # "ProximalPhalanxOutlineAgeGroup",
+    # "ProximalPhalanxOutlineCorrect",
+    # "ProximalPhalanxTW",
+    # "SonyAIBORobotSurface1",
+    # "SonyAIBORobotSurface2",
+    # "SyntheticControl",
+    # "TwoLeadECG",
+    # "Wine",
 ]
 
 dataset_names_full = [
@@ -143,7 +145,7 @@ dataset_names_full = [
     "OSULeaf",
     "PhalangesOutlinesCorrect",
     "Phoneme",
-    # "PickupGestureWiimoteZ",
+    "PickupGestureWiimoteZ",
     "PigAirwayPressure",
     "PigArtPressure",
     "PigCVP",
@@ -158,7 +160,7 @@ dataset_names_full = [
     "SemgHandGenderCh2",
     "SemgHandMovementCh2",
     "SemgHandSubjectCh2",
-    # "ShakeGestureWiimoteZ",
+    "ShakeGestureWiimoteZ",
     "ShapeletSim",
     "ShapesAll",
     "SmallKitchenAppliances",
@@ -187,16 +189,22 @@ dataset_names_full = [
     "WormsTwoClass",
     "Yoga",
 ]
-print("Total datasets:", len(dataset_names_full))
-used_dataset = dataset_names_full
+# print("Total datasets:", len(dataset_names_full))
+# used_dataset = dataset_names_full
+# used_dataset = dataset_names_excerpt
 
-# used_dataset = [
-#     "ECG200",
-#     "GunPoint",
-#     "Coffee",
-#     "Beef",
-#     "ItalyPowerDemand",
-# ]
+# print("Total datasets being tested:", len(used_dataset))
+
+
+def get_dataset_names():
+    from aeon.datasets.tsc_datasets import univariate
+    print("Univariate length = ", len(univariate))
+    return sorted(list(univariate))
+
+
+dataset_names_full = get_dataset_names()
+# used_dataset = dataset_names_full
+used_dataset = dataset_names_excerpt
 
 
 # only picking WEASEL 2.0 as classifier
@@ -236,23 +244,34 @@ server = False
 
 if __name__ == "__main__":
 
+
+
     def _parallel_fit(dataset_name, clf_name):
         # ignore all future warnings
         simplefilter(action="ignore", category=FutureWarning)
         simplefilter(action="ignore", category=UserWarning)
 
-        X_train, y_train = load_from_ucr_txt_to_dataframe_plain(
-            os.path.join(DATA_PATH, dataset_name, dataset_name + "_TRAIN.txt")
-        )
-        X_test, y_test = load_from_ucr_txt_to_dataframe_plain(
-            os.path.join(DATA_PATH, dataset_name, dataset_name + "_TEST.txt")
-        )
+        # X_train, y_train = load_from_ucr_txt_to_dataframe_plain(
+        #     os.path.join(DATA_PATH, dataset_name, dataset_name + "_TRAIN.txt")
+        # )
+        # X_test, y_test = load_from_ucr_txt_to_dataframe_plain(
+        #     os.path.join(DATA_PATH, dataset_name, dataset_name + "_TEST.txt")
+        # )
+        # X_train = np.reshape(np.array(X_train), (len(X_train), 1, -1))
+        # X_test = np.reshape(np.array(X_test), (len(X_test), 1, -1))
 
-        X_train = np.reshape(np.array(X_train), (len(X_train), 1, -1))
-        X_test = np.reshape(np.array(X_test), (len(X_test), 1, -1))
+        from aeon.datasets import load_classification
+        X_train, y_train = load_classification(
+            dataset_name, split="train",
+            # load_equal_length=False#, load_no_missing=True
+        )
+        X_test, y_test = load_classification(
+            dataset_name, split="test",
+            # load_equal_length=False, load_no_missing=True
+        )
         try:
             return make_run(X_test, X_train, clf_name, dataset_name, y_test, y_train)
-        except ValueError as e:
+        except Exception as e:
             print(f"Skipping {dataset_name} due to error: {e}")
             return {}
 
@@ -368,6 +387,10 @@ if __name__ == "__main__":
         for fit, pred, dataset_name in zip(all_fit, all_pred, all_datasets):
             csv_timings.append((name, dataset_name, fit, pred))
 
+    log_no=1
+    while os.path.exists("ucr-full-test-accuracy-%s.csv"%log_no):
+        log_no+=1
+
     pd.DataFrame.from_records(
         csv_scores,
         columns=[
@@ -376,7 +399,7 @@ if __name__ == "__main__":
             "Accuracy",
             "Train-Acc",
         ],
-    ).to_csv("ucr-113-accuracy-sone.csv", index=False)
+    ).to_csv("ucr-test-accuracy-%s.csv"%log_no, index=False)
 
     pd.DataFrame.from_records(
         csv_timings,
@@ -386,4 +409,4 @@ if __name__ == "__main__":
             "Fit-Time",
             "Predict-Time",
         ],
-    ).to_csv("ucr-113-runtime-sone.csv", index=False)
+    ).to_csv("ucr-test-runtime-%s.csv"%log_no, index=False)
