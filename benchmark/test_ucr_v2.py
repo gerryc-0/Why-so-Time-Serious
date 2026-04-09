@@ -173,18 +173,15 @@ def get_classifiers(threads_to_use):
         "WEASEL 2.0":  WEASEL_V2(random_state=1379, n_jobs=threads_to_use),
         "cBOSS (D)":      ContractableBOSS(random_state=1379, n_jobs=threads_to_use),
         "Hydra (K/D)":     HydraClassifier(random_state=1379, n_jobs=threads_to_use),
-        # "HC2":         HIVECOTEV2(random_state=1379, n_jobs=threads_to_use),
-        # "MultiRocket": MultiRocketClassifier(random_state=1379, n_jobs=threads_to_use),
-        # "TS-CHIEF":    TSCHIEF(random_state=1379),
-        # "HC1":         HIVECOTEV1(random_state=1379, n_jobs=threads_to_use),
-        # "R_DST":       RDSTClassifier(random_state=1379, n_jobs=threads_to_use),
-        # "Rocket":      RocketClassifier(random_state=1379, n_jobs=threads_to_use),
-        # "MiniRocket":  MiniRocketClassifier(random_state=1379, n_jobs=threads_to_use),
+        "MultiRocket": MultiRocketClassifier(random_state=1379, n_jobs=threads_to_use),
+        "R_DST":       RDSTClassifier(random_state=1379, n_jobs=threads_to_use),
+        "Rocket":      RocketClassifier(random_state=1379, n_jobs=threads_to_use),
+        "MiniRocket":  MiniRocketClassifier(random_state=1379, n_jobs=threads_to_use),
     }
     return clfs
 
 
-# Configuration, adapt to your needs
+# config based on hardware / time constraints
 parallel_jobs = 1
 threads_to_use = 4
 
