@@ -1,0 +1,509 @@
+Classifier,Dataset,Fit-Time,Predict-Time
+WEASEL,ACSF1,4.52,2.52
+WEASEL,Adiac,3.23,1.22
+WEASEL,AllGestureWiimoteX,5.85,6.28
+WEASEL,AllGestureWiimoteY,6.33,5.5
+WEASEL,AllGestureWiimoteZ,6.59,6.44
+WEASEL,ArrowHead,0.76,0.75
+WEASEL,BME,0.55,0.27
+WEASEL,Beef,0.88,0.28
+WEASEL,BeetleFly,0.87,0.25
+WEASEL,BirdChicken,0.8,0.25
+WEASEL,CBF,0.81,1.5
+WEASEL,Car,1.52,0.62
+WEASEL,Chinatown,0.2,0.04
+WEASEL,ChlorineConcentration,3.35,8.87
+WEASEL,CinCECGTorso,2.79,46.84
+WEASEL,Coffee,1.19,0.18
+WEASEL,Computers,7.54,3.19
+WEASEL,CricketX,6.15,1.99
+WEASEL,CricketY,6.09,2.0
+WEASEL,CricketZ,6.54,2.13
+WEASEL,DiatomSizeReduction,0.96,1.65
+WEASEL,DistalPhalanxOutlineAgeGroup,2.73,0.31
+WEASEL,DistalPhalanxOutlineCorrect,3.34,0.42
+WEASEL,DistalPhalanxTW,2.65,0.24
+WEASEL,DodgerLoopDay,1.2,0.42
+WEASEL,DodgerLoopGame,0.61,0.64
+WEASEL,DodgerLoopWeekend,0.86,0.8
+WEASEL,ECG200,1.43,0.23
+WEASEL,ECG5000,3.08,8.34
+WEASEL,ECGFiveDays,0.64,1.26
+WEASEL,EOGHorizontalSignal,21.32,7.59
+WEASEL,EOGVerticalSignal,19.84,6.16
+WEASEL,Earthquakes,5.26,1.03
+WEASEL,EthanolLevel,22.96,14.3
+WEASEL,FaceAll,3.16,2.13
+WEASEL,FaceFour,0.74,0.48
+WEASEL,FacesUCR,1.28,3.01
+WEASEL,FiftyWords,5.39,1.75
+WEASEL,Fish,2.28,0.98
+WEASEL,FordA,125.36,8.62
+WEASEL,FreezerRegularTrain,2.13,13.53
+WEASEL,FreezerSmallTrain,0.69,10.59
+WEASEL,Fungi,0.5,0.4
+WEASEL,GestureMidAirD1,2.77,0.58
+WEASEL,GestureMidAirD2,2.77,0.62
+WEASEL,GestureMidAirD3,3.17,0.62
+WEASEL,GesturePebbleZ1,2.27,1.13
+WEASEL,GesturePebbleZ2,2.76,1.48
+WEASEL,GunPoint,0.5,0.24
+WEASEL,GunPointAgeSpan,0.74,0.43
+WEASEL,GunPointMaleVersusFemale,0.74,0.47
+WEASEL,GunPointOldVersusYoung,0.75,0.49
+WEASEL,Ham,1.34,0.6
+WEASEL,HandOutlines,66.61,12.65
+WEASEL,Haptics,4.43,4.65
+WEASEL,Herring,1.0,0.39
+WEASEL,HouseTwenty,2.52,3.93
+WEASEL,InlineSkate,5.1,15.87
+WEASEL,InsectEPGRegularTrain,1.3,2.02
+WEASEL,InsectEPGSmallTrain,0.62,1.92
+WEASEL,InsectWingbeatSound,1.85,5.3
+WEASEL,ItalyPowerDemand,0.18,0.1
+WEASEL,LargeKitchenAppliances,6.84,3.39
+WEASEL,Lightning2,1.2,0.58
+WEASEL,Lightning7,1.01,0.39
+WEASEL,Mallat,1.69,37.19
+WEASEL,Meat,1.77,0.41
+WEASEL,MedicalImages,2.63,1.17
+WEASEL,MelbournePedestrian,1.18,0.22
+WEASEL,MiddlePhalanxOutlineAgeGroup,1.94,0.19
+WEASEL,MiddlePhalanxOutlineCorrect,2.37,0.29
+WEASEL,MiddlePhalanxTW,1.91,0.21
+WEASEL,MixedShapesRegularTrain,16.73,30.16
+WEASEL,MixedShapesSmallTrain,3.5,30.91
+WEASEL,MoteStrain,1.32,1.46
+WEASEL,NonInvasiveFetalECGThorax1,99.17,21.05
+WEASEL,NonInvasiveFetalECGThorax2,118.29,20.73
+WEASEL,OSULeaf,3.35,1.5
+WEASEL,OliveOil,0.73,0.24
+WEASEL,PLAID,31.43,9.45
+WEASEL,PhalangesOutlinesCorrect,8.18,0.8
+WEASEL,Phoneme,7.41,30.06
+WEASEL,PickupGestureWiimoteZ,1.82,0.38
+WEASEL,PigAirwayPressure,9.36,7.8
+WEASEL,PigArtPressure,6.46,6.13
+WEASEL,PigCVP,7.06,6.19
+WEASEL,Plane,0.7,0.14
+WEASEL,PowerCons,0.93,0.27
+WEASEL,ProximalPhalanxOutlineAgeGroup,2.0,0.22
+WEASEL,ProximalPhalanxOutlineCorrect,2.52,0.3
+WEASEL,ProximalPhalanxTW,1.88,0.24
+WEASEL,RefrigerationDevices,6.43,3.43
+WEASEL,Rock,1.59,2.11
+WEASEL,ScreenType,7.96,3.44
+WEASEL,SemgHandGenderCh2,10.41,11.82
+WEASEL,SemgHandMovementCh2,16.62,8.84
+WEASEL,SemgHandSubjectCh2,18.23,8.24
+WEASEL,ShakeGestureWiimoteZ,0.92,0.29
+WEASEL,ShapeletSim,0.63,1.15
+WEASEL,ShapesAll,13.61,4.43
+WEASEL,SmallKitchenAppliances,7.6,3.39
+WEASEL,SmoothSubspace,0.12,0.03
+WEASEL,SonyAIBORobotSurface1,0.47,0.44
+WEASEL,SonyAIBORobotSurface2,0.47,0.54
+WEASEL,StarLightCurves,26.41,104.06
+WEASEL,Strawberry,6.95,1.28
+WEASEL,SwedishLeaf,2.23,0.7
+WEASEL,Symbols,0.58,4.98
+WEASEL,SyntheticControl,1.1,0.17
+WEASEL,ToeSegmentation1,0.62,0.84
+WEASEL,ToeSegmentation2,0.64,0.61
+WEASEL,Trace,1.02,0.34
+WEASEL,TwoLeadECG,0.59,1.01
+WEASEL,TwoPatterns,4.61,4.1
+WEASEL,UMD,0.46,0.21
+WEASEL,UWaveGestureLibraryAll,48.43,52.03
+WEASEL,UWaveGestureLibraryX,11.75,13.79
+WEASEL,UWaveGestureLibraryY,8.52,14.9
+WEASEL,UWaveGestureLibraryZ,8.8,13.99
+WEASEL,Wafer,4.27,7.73
+WEASEL,Wine,0.64,0.15
+WEASEL,WordSynonyms,2.35,1.82
+WEASEL,Worms,5.53,1.04
+WEASEL,WormsTwoClass,5.03,0.96
+WEASEL,Yoga,2.91,16.24
+WEASEL 2.0,ACSF1,4.08,3.02
+WEASEL 2.0,Adiac,11.66,5.05
+WEASEL 2.0,AllGestureWiimoteX,19.54,27.44
+WEASEL 2.0,AllGestureWiimoteY,18.19,28.52
+WEASEL 2.0,AllGestureWiimoteZ,18.14,30.13
+WEASEL 2.0,ArrowHead,0.75,1.25
+WEASEL 2.0,BME,0.51,0.63
+WEASEL 2.0,Beef,0.97,0.42
+WEASEL 2.0,BeetleFly,0.71,0.29
+WEASEL 2.0,BirdChicken,0.71,0.29
+WEASEL 2.0,CBF,0.55,3.39
+WEASEL 2.0,Car,1.57,0.91
+WEASEL 2.0,Chinatown,0.34,0.35
+WEASEL 2.0,ChlorineConcentration,12.3,57.84
+WEASEL 2.0,CinCECGTorso,2.54,57.41
+WEASEL 2.0,Coffee,0.79,0.27
+WEASEL 2.0,Computers,22.28,15.89
+WEASEL 2.0,CricketX,15.63,9.15
+WEASEL 2.0,CricketY,15.49,9.27
+WEASEL 2.0,CricketZ,16.52,9.61
+WEASEL 2.0,Crop,117.91,61.07
+WEASEL 2.0,DiatomSizeReduction,0.7,2.79
+WEASEL 2.0,DistalPhalanxOutlineAgeGroup,5.49,0.68
+WEASEL 2.0,DistalPhalanxOutlineCorrect,7.28,1.44
+WEASEL 2.0,DistalPhalanxTW,4.89,0.58
+WEASEL 2.0,DodgerLoopDay,1.16,0.64
+WEASEL 2.0,DodgerLoopGame,0.47,1.11
+WEASEL 2.0,DodgerLoopWeekend,0.66,1.41
+WEASEL 2.0,ECG200,0.98,0.33
+WEASEL 2.0,ECG5000,11.59,39.99
+WEASEL 2.0,ECGFiveDays,0.38,2.78
+WEASEL 2.0,EOGHorizontalSignal,36.2,29.5
+WEASEL 2.0,EOGVerticalSignal,38.25,29.7
+WEASEL 2.0,Earthquakes,17.26,5.31
+WEASEL 2.0,ElectricDevices,181.8,37.02
+WEASEL 2.0,EthanolLevel,73.41,57.86
+WEASEL 2.0,FaceAll,9.37,12.53
+WEASEL 2.0,FaceFour,0.61,0.77
+WEASEL 2.0,FacesUCR,1.34,5.71
+WEASEL 2.0,FiftyWords,13.5,7.34
+WEASEL 2.0,Fish,2.8,1.71
+WEASEL 2.0,FordA,157.42,39.6
+WEASEL 2.0,FordB,147.25,22.14
+WEASEL 2.0,FreezerRegularTrain,1.84,16.96
+WEASEL 2.0,FreezerSmallTrain,0.47,17.1
+WEASEL 2.0,Fungi,0.37,0.81
+WEASEL 2.0,GestureMidAirD1,2.54,0.99
+WEASEL 2.0,GestureMidAirD2,2.48,0.92
+WEASEL 2.0,GestureMidAirD3,2.6,1.05
+WEASEL 2.0,GesturePebbleZ1,2.02,1.66
+WEASEL 2.0,GesturePebbleZ2,2.28,1.53
+WEASEL 2.0,GunPoint,0.5,0.51
+WEASEL 2.0,GunPointAgeSpan,1.04,0.98
+WEASEL 2.0,GunPointMaleVersusFemale,1.1,1.07
+WEASEL 2.0,GunPointOldVersusYoung,1.01,0.95
+WEASEL 2.0,Ham,1.66,0.96
+WEASEL 2.0,HandOutlines,186.94,57.01
+WEASEL 2.0,Haptics,4.52,6.06
+WEASEL 2.0,Herring,1.18,0.67
+WEASEL 2.0,HouseTwenty,2.23,4.61
+WEASEL 2.0,InlineSkate,4.72,18.51
+WEASEL 2.0,InsectEPGRegularTrain,1.43,2.93
+WEASEL 2.0,InsectEPGSmallTrain,0.49,2.89
+WEASEL 2.0,InsectWingbeatSound,1.96,9.23
+WEASEL 2.0,ItalyPowerDemand,0.42,0.75
+WEASEL 2.0,LargeKitchenAppliances,23.85,17.88
+WEASEL 2.0,Lightning2,1.34,0.8
+WEASEL 2.0,Lightning7,1.04,0.56
+WEASEL 2.0,Mallat,1.71,42.92
+WEASEL 2.0,Meat,1.14,0.6
+WEASEL 2.0,MedicalImages,4.0,3.07
+WEASEL 2.0,MelbournePedestrian,7.32,3.94
+WEASEL 2.0,MiddlePhalanxOutlineAgeGroup,3.71,0.51
+WEASEL 2.0,MiddlePhalanxOutlineCorrect,5.2,1.02
+WEASEL 2.0,MiddlePhalanxTW,3.57,0.53
+WEASEL 2.0,MixedShapesRegularTrain,37.5,137.21
+WEASEL 2.0,MixedShapesSmallTrain,2.92,42.89
+WEASEL 2.0,MoteStrain,0.37,2.37
+WEASEL 2.0,NonInvasiveFetalECGThorax1,102.77,84.42
+WEASEL 2.0,NonInvasiveFetalECGThorax2,102.97,89.15
+WEASEL 2.0,OSULeaf,2.68,1.87
+WEASEL 2.0,OliveOil,0.77,0.41
+WEASEL 2.0,PLAID,59.62,47.44
+WEASEL 2.0,PhalangesOutlinesCorrect,16.62,2.83
+WEASEL 2.0,Phoneme,5.86,35.65
+WEASEL 2.0,PickupGestureWiimoteZ,1.02,0.51
+WEASEL 2.0,PigAirwayPressure,5.79,8.06
+WEASEL 2.0,PigArtPressure,5.18,7.46
+WEASEL 2.0,PigCVP,5.18,7.68
+WEASEL 2.0,Plane,0.82,0.34
+WEASEL 2.0,PowerCons,1.36,0.62
+WEASEL 2.0,ProximalPhalanxOutlineAgeGroup,3.78,0.75
+WEASEL 2.0,ProximalPhalanxOutlineCorrect,5.22,1.06
+WEASEL 2.0,ProximalPhalanxTW,3.66,0.76
+WEASEL 2.0,RefrigerationDevices,22.67,16.42
+WEASEL 2.0,Rock,1.6,2.69
+WEASEL 2.0,ScreenType,23.65,17.47
+WEASEL 2.0,SemgHandGenderCh2,37.41,60.58
+WEASEL 2.0,SemgHandMovementCh2,55.68,45.43
+WEASEL 2.0,SemgHandSubjectCh2,56.68,45.04
+WEASEL 2.0,ShakeGestureWiimoteZ,0.83,0.41
+WEASEL 2.0,ShapeletSim,0.51,1.74
+WEASEL 2.0,ShapesAll,24.88,16.75
+WEASEL 2.0,SmallKitchenAppliances,24.46,18.23
+WEASEL 2.0,SmoothSubspace,0.65,0.14
+WEASEL 2.0,SonyAIBORobotSurface1,0.32,0.96
+WEASEL 2.0,SonyAIBORobotSurface2,0.33,1.45
+WEASEL 2.0,StarLightCurves,75.78,519.73
+WEASEL 2.0,Strawberry,14.88,5.22
+WEASEL 2.0,SwedishLeaf,8.03,4.3
+WEASEL 2.0,Symbols,0.47,7.41
+WEASEL 2.0,SyntheticControl,2.64,0.79
+WEASEL 2.0,ToeSegmentation1,0.56,1.2
+WEASEL 2.0,ToeSegmentation2,0.55,0.89
+WEASEL 2.0,Trace,1.16,0.57
+WEASEL 2.0,TwoLeadECG,0.34,1.99
+WEASEL 2.0,TwoPatterns,15.6,28.74
+WEASEL 2.0,UMD,0.42,0.48
+WEASEL 2.0,UWaveGestureLibraryAll,62.05,186.96
+WEASEL 2.0,UWaveGestureLibraryX,24.79,60.26
+WEASEL 2.0,UWaveGestureLibraryY,24.35,61.08
+WEASEL 2.0,UWaveGestureLibraryZ,24.2,60.54
+WEASEL 2.0,Wafer,18.88,60.25
+WEASEL 2.0,Wine,0.66,0.25
+WEASEL 2.0,WordSynonyms,7.05,9.01
+WEASEL 2.0,Worms,4.4,1.34
+WEASEL 2.0,WormsTwoClass,4.27,1.26
+WEASEL 2.0,Yoga,10.92,67.77
+cBOSS (D),ACSF1,76.93,5.45
+cBOSS (D),Adiac,25.58,9.92
+cBOSS (D),AllGestureWiimoteX,171.57,19.18
+cBOSS (D),AllGestureWiimoteY,177.3,24.36
+cBOSS (D),AllGestureWiimoteZ,182.18,15.67
+cBOSS (D),ArrowHead,22.14,6.52
+cBOSS (D),BME,10.3,4.44
+cBOSS (D),Beef,14.94,1.37
+cBOSS (D),BeetleFly,19.09,1.5
+cBOSS (D),BirdChicken,23.12,2.09
+cBOSS (D),CBF,10.37,16.12
+cBOSS (D),Car,31.05,1.97
+cBOSS (D),Chinatown,2.0,5.83
+cBOSS (D),ChlorineConcentration,32.97,114.67
+cBOSS (D),CinCECGTorso,36.42,75.04
+cBOSS (D),Coffee,9.49,1.54
+cBOSS (D),Computers,194.25,12.59
+cBOSS (D),CricketX,96.11,10.64
+cBOSS (D),CricketY,107.4,11.14
+cBOSS (D),CricketZ,102.11,10.43
+cBOSS (D),Crop,225.23,642.96
+cBOSS (D),DiatomSizeReduction,11.59,9.2
+cBOSS (D),DistalPhalanxOutlineAgeGroup,10.23,4.43
+cBOSS (D),DistalPhalanxOutlineCorrect,12.7,6.29
+cBOSS (D),DistalPhalanxTW,9.21,3.55
+cBOSS (D),DodgerLoopDay,29.0,2.25
+cBOSS (D),DodgerLoopGame,12.09,3.4
+cBOSS (D),DodgerLoopWeekend,17.72,4.53
+cBOSS (D),ECG200,7.98,4.35
+cBOSS (D),ECG5000,25.16,96.72
+cBOSS (D),ECGFiveDays,7.84,14.23
+cBOSS (D),EOGHorizontalSignal,391.32,20.02
+cBOSS (D),EOGVerticalSignal,361.35,18.99
+cBOSS (D),Earthquakes,122.19,4.12
+cBOSS (D),ElectricDevices,888.96,336.77
+cBOSS (D),EthanolLevel,264.39,36.0
+cBOSS (D),FaceAll,30.9,32.85
+cBOSS (D),FaceFour,16.08,1.99
+cBOSS (D),FacesUCR,12.14,38.83
+cBOSS (D),FiftyWords,67.02,10.1
+cBOSS (D),Fish,59.3,5.08
+cBOSS (D),FordA,5757.53,128.7
+cBOSS (D),FordB,7123.05,83.01
+cBOSS (D),FreezerRegularTrain,28.11,59.18
+cBOSS (D),FreezerSmallTrain,11.24,46.48
+cBOSS (D),Fungi,10.9,0.0
+cBOSS (D),GestureMidAirD1,47.97,3.72
+cBOSS (D),GestureMidAirD2,56.27,3.13
+cBOSS (D),GestureMidAirD3,56.53,2.8
+cBOSS (D),GesturePebbleZ1,55.34,3.26
+cBOSS (D),GesturePebbleZ2,56.11,2.95
+cBOSS (D),GunPoint,8.61,2.65
+cBOSS (D),GunPointAgeSpan,10.21,5.45
+cBOSS (D),GunPointMaleVersusFemale,10.35,5.12
+cBOSS (D),GunPointOldVersusYoung,10.4,5.27
+cBOSS (D),Ham,40.97,2.84
+cBOSS (D),HandOutlines,907.39,30.96
+cBOSS (D),Haptics,113.8,11.82
+cBOSS (D),Herring,20.88,1.75
+cBOSS (D),HouseTwenty,47.02,5.92
+cBOSS (D),InlineSkate,55.72,13.82
+cBOSS (D),InsectEPGRegularTrain,36.7,6.45
+cBOSS (D),InsectEPGSmallTrain,13.19,5.89
+cBOSS (D),InsectWingbeatSound,32.15,37.81
+cBOSS (D),ItalyPowerDemand,1.34,11.42
+cBOSS (D),LargeKitchenAppliances,165.65,13.38
+cBOSS (D),Lightning2,28.91,1.68
+cBOSS (D),Lightning7,19.93,1.58
+cBOSS (D),Mallat,26.62,41.55
+cBOSS (D),Meat,13.78,1.84
+cBOSS (D),MedicalImages,10.65,12.36
+cBOSS (D),MelbournePedestrian,3.58,36.98
+cBOSS (D),MiddlePhalanxOutlineAgeGroup,6.64,2.84
+cBOSS (D),MiddlePhalanxOutlineCorrect,8.79,5.08
+cBOSS (D),MiddlePhalanxTW,6.8,2.87
+cBOSS (D),MixedShapesRegularTrain,475.64,141.53
+cBOSS (D),MixedShapesSmallTrain,69.43,89.24
+cBOSS (D),MoteStrain,5.92,17.88
+cBOSS (D),NonInvasiveFetalECGThorax1,1563.68,48.33
+cBOSS (D),NonInvasiveFetalECGThorax2,1235.46,60.24
+cBOSS (D),OSULeaf,71.62,7.24
+cBOSS (D),OliveOil,15.75,0.98
+cBOSS (D),PLAID,718.37,51.4
+cBOSS (D),PhalangesOutlinesCorrect,28.35,18.84
+cBOSS (D),Phoneme,70.94,86.89
+cBOSS (D),PickupGestureWiimoteZ,21.03,1.36
+cBOSS (D),PigAirwayPressure,62.97,7.47
+cBOSS (D),PigArtPressure,118.32,11.29
+cBOSS (D),PigCVP,116.83,11.08
+cBOSS (D),Plane,10.3,2.17
+cBOSS (D),PowerCons,12.32,3.17
+cBOSS (D),ProximalPhalanxOutlineAgeGroup,6.55,3.63
+cBOSS (D),ProximalPhalanxOutlineCorrect,8.4,5.5
+cBOSS (D),ProximalPhalanxTW,6.6,3.68
+cBOSS (D),RefrigerationDevices,279.93,14.75
+cBOSS (D),Rock,13.92,3.08
+cBOSS (D),ScreenType,187.82,15.01
+cBOSS (D),SemgHandGenderCh2,527.53,10.99
+cBOSS (D),SemgHandMovementCh2,400.83,8.57
+cBOSS (D),SemgHandSubjectCh2,471.04,8.54
+cBOSS (D),ShakeGestureWiimoteZ,27.25,1.56
+cBOSS (D),ShapeletSim,8.96,3.58
+cBOSS (D),ShapesAll,224.91,16.98
+cBOSS (D),SmallKitchenAppliances,179.99,11.63
+cBOSS (D),SmoothSubspace,1.13,1.68
+cBOSS (D),SonyAIBORobotSurface1,3.47,6.99
+cBOSS (D),SonyAIBORobotSurface2,3.2,11.62
+cBOSS (D),StarLightCurves,673.96,284.64
+cBOSS (D),Strawberry,46.4,10.47
+cBOSS (D),SwedishLeaf,19.87,11.97
+cBOSS (D),Symbols,20.29,18.51
+cBOSS (D),SyntheticControl,4.78,4.69
+cBOSS (D),ToeSegmentation1,17.03,4.15
+cBOSS (D),ToeSegmentation2,18.86,2.91
+cBOSS (D),Trace,17.19,2.14
+cBOSS (D),TwoLeadECG,4.15,14.99
+cBOSS (D),TwoPatterns,56.95,72.35
+cBOSS (D),UMD,8.25,2.75
+cBOSS (D),UWaveGestureLibraryAll,1155.98,68.03
+cBOSS (D),UWaveGestureLibraryX,187.02,65.97
+cBOSS (D),UWaveGestureLibraryY,186.59,60.21
+cBOSS (D),UWaveGestureLibraryZ,183.82,64.43
+cBOSS (D),Wafer,44.42,154.93
+cBOSS (D),Wine,13.28,1.43
+cBOSS (D),WordSynonyms,38.1,10.87
+cBOSS (D),Worms,74.1,2.7
+cBOSS (D),WormsTwoClass,97.12,3.95
+cBOSS (D),Yoga,75.86,74.4
+Hydra (K/D),ACSF1,1.93,1.5
+Hydra (K/D),Adiac,0.59,0.45
+Hydra (K/D),AllGestureWiimoteX,1.89,3.66
+Hydra (K/D),AllGestureWiimoteY,1.82,3.36
+Hydra (K/D),AllGestureWiimoteZ,1.53,3.22
+Hydra (K/D),ArrowHead,0.11,0.36
+Hydra (K/D),BME,0.06,0.13
+Hydra (K/D),Beef,0.22,0.15
+Hydra (K/D),BeetleFly,0.19,0.13
+Hydra (K/D),BirdChicken,0.25,0.19
+Hydra (K/D),CBF,0.05,0.8
+Hydra (K/D),Car,0.45,0.37
+Hydra (K/D),Chinatown,0.02,0.05
+Hydra (K/D),ChlorineConcentration,1.17,7.5
+Hydra (K/D),CinCECGTorso,1.11,142.26
+Hydra (K/D),Coffee,0.22,0.08
+Hydra (K/D),Computers,1.92,1.64
+Hydra (K/D),CricketX,1.3,1.1
+Hydra (K/D),CricketY,1.32,1.1
+Hydra (K/D),CricketZ,1.25,1.09
+Hydra (K/D),Crop,16.56,8.54
+Hydra (K/D),DiatomSizeReduction,0.09,0.87
+Hydra (K/D),DistalPhalanxOutlineAgeGroup,0.45,0.09
+Hydra (K/D),DistalPhalanxOutlineCorrect,0.52,0.17
+Hydra (K/D),DistalPhalanxTW,0.28,0.09
+Hydra (K/D),DodgerLoopDay,0.28,0.23
+Hydra (K/D),DodgerLoopGame,0.09,0.48
+Hydra (K/D),DodgerLoopWeekend,0.11,0.46
+Hydra (K/D),ECG200,0.17,0.09
+Hydra (K/D),ECG5000,1.09,9.17
+Hydra (K/D),ECGFiveDays,0.06,0.97
+Hydra (K/D),EOGHorizontalSignal,10.34,4.09
+Hydra (K/D),EOGVerticalSignal,5.68,4.65
+Hydra (K/D),Earthquakes,1.69,0.67
+Hydra (K/D),ElectricDevices,34.4,4.88
+Hydra (K/D),EthanolLevel,11.64,7.43
+Hydra (K/D),FaceAll,0.78,1.81
+Hydra (K/D),FaceFour,0.12,0.28
+Hydra (K/D),FacesUCR,0.28,2.23
+Hydra (K/D),FiftyWords,1.05,0.96
+Hydra (K/D),Fish,0.79,0.72
+Hydra (K/D),FordA,38.09,5.83
+Hydra (K/D),FordB,35.05,3.42
+Hydra (K/D),FreezerRegularTrain,0.64,7.97
+Hydra (K/D),FreezerSmallTrain,0.11,6.93
+Hydra (K/D),Fungi,0.05,0.28
+Hydra (K/D),GestureMidAirD1,0.75,0.42
+Hydra (K/D),GestureMidAirD2,0.68,0.41
+Hydra (K/D),GestureMidAirD3,0.69,0.41
+Hydra (K/D),GesturePebbleZ1,0.77,0.74
+Hydra (K/D),GesturePebbleZ2,0.65,0.67
+Hydra (K/D),GunPoint,0.09,0.19
+Hydra (K/D),GunPointAgeSpan,0.19,0.34
+Hydra (K/D),GunPointMaleVersusFemale,0.18,0.32
+Hydra (K/D),GunPointOldVersusYoung,0.2,0.35
+Hydra (K/D),Ham,0.42,0.35
+Hydra (K/D),HandOutlines,147.72,17.56
+Hydra (K/D),Haptics,1.93,3.16
+Hydra (K/D),Herring,0.44,0.26
+Hydra (K/D),HouseTwenty,0.95,2.57
+Hydra (K/D),InlineSkate,1.98,10.34
+Hydra (K/D),InsectEPGRegularTrain,0.41,1.44
+Hydra (K/D),InsectEPGSmallTrain,0.16,1.42
+Hydra (K/D),InsectWingbeatSound,0.44,2.88
+Hydra (K/D),ItalyPowerDemand,0.02,0.09
+Hydra (K/D),LargeKitchenAppliances,2.1,1.92
+Hydra (K/D),Lightning2,0.49,0.43
+Hydra (K/D),Lightning7,0.25,0.24
+Hydra (K/D),Mallat,0.58,76.37
+Hydra (K/D),Meat,0.4,0.19
+Hydra (K/D),MedicalImages,0.46,0.43
+Hydra (K/D),MelbournePedestrian,0.48,0.25
+Hydra (K/D),MiddlePhalanxOutlineAgeGroup,0.28,0.08
+Hydra (K/D),MiddlePhalanxOutlineCorrect,0.43,0.14
+Hydra (K/D),MiddlePhalanxTW,0.29,0.07
+Hydra (K/D),MixedShapesRegularTrain,5.06,79.74
+Hydra (K/D),MixedShapesSmallTrain,1.11,76.91
+Hydra (K/D),MoteStrain,0.13,0.71
+Hydra (K/D),NonInvasiveFetalECGThorax1,18.94,19.54
+Hydra (K/D),NonInvasiveFetalECGThorax2,16.69,16.69
+Hydra (K/D),OSULeaf,0.82,0.81
+Hydra (K/D),OliveOil,0.2,0.14
+Hydra (K/D),PLAID,11.82,7.65
+Hydra (K/D),PhalangesOutlinesCorrect,1.99,0.39
+Hydra (K/D),Phoneme,2.26,43.37
+Hydra (K/D),PickupGestureWiimoteZ,0.32,0.17
+Hydra (K/D),PigAirwayPressure,2.83,5.75
+Hydra (K/D),PigArtPressure,1.91,3.7
+Hydra (K/D),PigCVP,2.15,4.14
+Hydra (K/D),Plane,0.17,0.11
+Hydra (K/D),PowerCons,0.25,0.19
+Hydra (K/D),ProximalPhalanxOutlineAgeGroup,0.43,0.12
+Hydra (K/D),ProximalPhalanxOutlineCorrect,0.47,0.14
+Hydra (K/D),ProximalPhalanxTW,0.25,0.08
+Hydra (K/D),RefrigerationDevices,2.56,2.44
+Hydra (K/D),Rock,0.73,1.58
+Hydra (K/D),ScreenType,2.28,2.13
+Hydra (K/D),SemgHandGenderCh2,5.41,12.29
+Hydra (K/D),SemgHandMovementCh2,8.71,7.55
+Hydra (K/D),SemgHandSubjectCh2,7.69,7.45
+Hydra (K/D),ShakeGestureWiimoteZ,0.23,0.19
+Hydra (K/D),ShapeletSim,0.15,0.87
+Hydra (K/D),ShapesAll,2.52,2.27
+Hydra (K/D),SmallKitchenAppliances,2.2,2.06
+Hydra (K/D),SmoothSubspace,0.03,0.01
+Hydra (K/D),SonyAIBORobotSurface1,0.05,0.47
+Hydra (K/D),SonyAIBORobotSurface2,0.05,0.43
+Hydra (K/D),Strawberry,1.32,0.57
+Hydra (K/D),SwedishLeaf,0.51,0.45
+Hydra (K/D),Symbols,0.11,2.79
+Hydra (K/D),SyntheticControl,0.16,0.09
+Hydra (K/D),ToeSegmentation1,0.12,0.56
+Hydra (K/D),ToeSegmentation2,0.14,0.38
+Hydra (K/D),Trace,0.3,0.27
+Hydra (K/D),TwoLeadECG,0.05,0.51
+Hydra (K/D),TwoPatterns,1.12,2.98
+Hydra (K/D),UMD,0.07,0.18
+Hydra (K/D),UWaveGestureLibraryAll,8.71,238.29
+Hydra (K/D),UWaveGestureLibraryX,2.71,9.41
+Hydra (K/D),UWaveGestureLibraryY,2.5,7.54
+Hydra (K/D),UWaveGestureLibraryZ,2.2,7.36
+Hydra (K/D),Wafer,1.75,8.45
+Hydra (K/D),Wine,0.13,0.1
+Hydra (K/D),WordSynonyms,0.6,1.19
+Hydra (K/D),Worms,1.52,0.66
+Hydra (K/D),WormsTwoClass,1.53,0.66
+Hydra (K/D),Yoga,1.06,9.58
