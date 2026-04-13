@@ -20,159 +20,49 @@ from aeon.classification.shapelet_based import RDSTClassifier
 from aeon.classification.dictionary_based import ContractableBOSS, TemporalDictionaryEnsemble
 from aeon.classification.convolution_based import HydraClassifier
 
-
-def load_from_ucr_txt_to_dataframe_plain(full_file_path_and_name):
-    """Load UCR datasets."""
-    df = pd.read_csv(
-        full_file_path_and_name,
-        sep=r"\s+|\t+|\s+\t+|\t+\s+",
-        engine="python",
-        header=None,
-    )
-    y = df.pop(0).values
-    df.columns -= 1
-    return df, y
-
-
-dataset_names_excerpt = [
-    "PickupGestureWiimoteZ",
-    "ShakeGestureWiimoteZ",
+# list of datasets to reproduce - importing from UCR using aeon library
+ucr_114 = [
+    "ACSF1", "Adiac", "ArrowHead", "Beef", "BeetleFly", "BirdChicken", "BME",
+    "Car", "CBF", "Chinatown", "ChlorineConcentration", "CinCECGTorso",
+    "Coffee", "Computers", "CricketX", "CricketY", "CricketZ", "Crop",
+    "DiatomSizeReduction", "DistalPhalanxOutlineAgeGroup",
+    "DistalPhalanxOutlineCorrect", "DistalPhalanxTW", "Earthquakes", "ECG200",
+    "ECG5000", "ECGFiveDays", "ElectricDevices", "EOGHorizontalSignal",
+    "EOGVerticalSignal", "EthanolLevel", "FaceAll", "FaceFour", "FacesUCR",
+    "FiftyWords", "Fish", "FordA", "FordB", "FreezerRegularTrain",
+    "FreezerSmallTrain", "GunPoint", "GunPointAgeSpan",
+    "GunPointMaleVersusFemale", "GunPointOldVersusYoung", "Ham",
+    "HandOutlines", "Haptics", "Herring", "HouseTwenty", "InlineSkate",
+    "InsectEPGRegularTrain", "InsectEPGSmallTrain", "InsectWingbeatSound",
+    "ItalyPowerDemand", "LargeKitchenAppliances", "Lightning2", "Lightning7",
+    "Mallat", "Meat", "MedicalImages", "MiddlePhalanxOutlineAgeGroup",
+    "MiddlePhalanxOutlineCorrect", "MiddlePhalanxTW",
+    "MixedShapesRegularTrain", "MixedShapesSmallTrain", "MoteStrain",
+    "NonInvasiveFetalECGThorax1", "NonInvasiveFetalECGThorax2", "OliveOil",
+    "OSULeaf", "PhalangesOutlinesCorrect", "Phoneme",
+    "PickupGestureWiimoteZ", "PigAirwayPressure", "PigArtPressure",
+    "PigCVP", "Plane", "PowerCons", "ProximalPhalanxOutlineAgeGroup",
+    "ProximalPhalanxOutlineCorrect", "ProximalPhalanxTW",
+    "RefrigerationDevices", "Rock", "ScreenType", "SemgHandGenderCh2",
+    "SemgHandMovementCh2", "SemgHandSubjectCh2", "ShakeGestureWiimoteZ",
+    "ShapeletSim", "ShapesAll", "SmallKitchenAppliances", "SmoothSubspace",
+    "SonyAIBORobotSurface1", "SonyAIBORobotSurface2", "StarLightCurves",
+    "Strawberry", "SwedishLeaf", "Symbols", "SyntheticControl",
+    "ToeSegmentation1", "ToeSegmentation2", "Trace", "TwoLeadECG",
+    "TwoPatterns", "UMD", "UWaveGestureLibraryAll", "UWaveGestureLibraryX",
+    "UWaveGestureLibraryY", "UWaveGestureLibraryZ", "Wafer", "Wine",
+    "WordSynonyms", "Worms", "WormsTwoClass", "Yoga",
 ]
 
-dataset_names_full = [
-    "ACSF1",
-    "Adiac",
-    "ArrowHead",
-    "Beef",
-    "BeetleFly",
-    "BirdChicken",
-    "BME",
-    "Car",
-    "CBF",
-    "Chinatown",
-    "ChlorineConcentration",
-    "CinCECGTorso",
-    "Coffee",
-    "Computers",
-    "CricketX",
-    "CricketY",
-    "CricketZ",
-    "Crop",
-    "DiatomSizeReduction",
-    "DistalPhalanxOutlineAgeGroup",
-    "DistalPhalanxOutlineCorrect",
-    "DistalPhalanxTW",
-    "Earthquakes",
-    "ECG200",
-    "ECG5000",
-    "ECGFiveDays",
-    "ElectricDevices",
-    "EOGHorizontalSignal",
-    "EOGVerticalSignal",
-    "EthanolLevel",
-    "FaceAll",
-    "FaceFour",
-    "FacesUCR",
-    "FiftyWords",
-    "Fish",
-    "FordA",
-    "FordB",
-    "FreezerRegularTrain",
-    "FreezerSmallTrain",
-    "GunPoint",
-    "GunPointAgeSpan",
-    "GunPointMaleVersusFemale",
-    "GunPointOldVersusYoung",
-    "Ham",
-    "HandOutlines",
-    "Haptics",
-    "Herring",
-    "HouseTwenty",
-    "InlineSkate",
-    "InsectEPGRegularTrain",
-    "InsectEPGSmallTrain",
-    "InsectWingbeatSound",
-    "ItalyPowerDemand",
-    "LargeKitchenAppliances",
-    "Lightning2",
-    "Lightning7",
-    "Mallat",
-    "Meat",
-    "MedicalImages",
-    "MiddlePhalanxOutlineAgeGroup",
-    "MiddlePhalanxOutlineCorrect",
-    "MiddlePhalanxTW",
-    "MixedShapesRegularTrain",
-    "MixedShapesSmallTrain",
-    "MoteStrain",
-    "NonInvasiveFetalECGThorax1",
-    "NonInvasiveFetalECGThorax2",
-    "OliveOil",
-    "OSULeaf",
-    "PhalangesOutlinesCorrect",
-    "Phoneme",
-    "PickupGestureWiimoteZ",
-    "PigAirwayPressure",
-    "PigArtPressure",
-    "PigCVP",
-    "Plane",
-    "PowerCons",
-    "ProximalPhalanxOutlineAgeGroup",
-    "ProximalPhalanxOutlineCorrect",
-    "ProximalPhalanxTW",
-    "RefrigerationDevices",
-    "Rock",
-    "ScreenType",
-    "SemgHandGenderCh2",
-    "SemgHandMovementCh2",
-    "SemgHandSubjectCh2",
-    "ShakeGestureWiimoteZ",
-    "ShapeletSim",
-    "ShapesAll",
-    "SmallKitchenAppliances",
-    "SmoothSubspace",
-    "SonyAIBORobotSurface1",
-    "SonyAIBORobotSurface2",
-    "StarLightCurves",
-    "Strawberry",
-    "SwedishLeaf",
-    "Symbols",
-    "SyntheticControl",
-    "ToeSegmentation1",
-    "ToeSegmentation2",
-    "Trace",
-    "TwoLeadECG",
-    "TwoPatterns",
-    "UMD",
-    "UWaveGestureLibraryAll",
-    "UWaveGestureLibraryX",
-    "UWaveGestureLibraryY",
-    "UWaveGestureLibraryZ",
-    "Wafer",
-    "Wine",
-    "WordSynonyms",
-    "Worms",
-    "WormsTwoClass",
-    "Yoga",
-]
-
-
-def get_dataset_names():
-    from aeon.datasets.tsc_datasets import univariate
-    print("Univariate length = ", len(univariate))
-    return sorted(list(univariate))
-
-
-dataset_names_full = get_dataset_names()
-used_dataset = dataset_names_full
-
+used_dataset = ucr_114
+# used_dataset = ["Crop", "ElectricDevices", "FordB", "StarLightCurves"]
 
 def get_classifiers(threads_to_use):
     clfs = {
-        "WEASEL":     WEASEL(random_state=1379, n_jobs=threads_to_use),
+        "WEASEL":      WEASEL(random_state=1379, n_jobs=threads_to_use),
         "WEASEL 2.0":  WEASEL_V2(random_state=1379, n_jobs=threads_to_use),
-        "cBOSS (D)":      ContractableBOSS(random_state=1379, n_jobs=threads_to_use),
-        "Hydra (K/D)":     HydraClassifier(random_state=1379, n_jobs=threads_to_use),
+        "cBOSS (D)":   ContractableBOSS(random_state=1379, n_jobs=threads_to_use),
+        "Hydra (K/D)": HydraClassifier(random_state=1379, n_jobs=threads_to_use),
         "MultiRocket": MultiRocketClassifier(random_state=1379, n_jobs=threads_to_use),
         "R_DST":       RDSTClassifier(random_state=1379, n_jobs=threads_to_use),
         "Rocket":      RocketClassifier(random_state=1379, n_jobs=threads_to_use),
@@ -314,15 +204,15 @@ if __name__ == "__main__":
             csv_timings.append((name, dataset_name, fit, pred))
 
     log_no = 1
-    while os.path.exists("ucr-full-test-accuracy-%s.csv" % log_no):
+    while os.path.exists("ucr-8-classifiers-accuracy-%s.csv" % log_no):
         log_no += 1
 
     pd.DataFrame.from_records(
         csv_scores,
         columns=["Classifier", "Dataset", "Accuracy", "Train-Acc"],
-    ).to_csv("ucr-test-accuracy-otherclfs-%s.csv" % log_no, index=False)
+    ).to_csv("ucr-8-classifiers-accuracy-%s.csv" % log_no, index=False)
 
     pd.DataFrame.from_records(
         csv_timings,
         columns=["Classifier", "Dataset", "Fit-Time", "Predict-Time"],
-    ).to_csv("ucr-test-runtime-otherclfs-%s.csv" % log_no, index=False)
+    ).to_csv("ucr-8-classifiers-runtime-%s.csv" % log_no, index=False)
